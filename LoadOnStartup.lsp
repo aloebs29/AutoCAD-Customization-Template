@@ -19,6 +19,13 @@
 	;; updated to point to the newest file location.
 
 	;; Load the command method template
+	(setq netReload (findfile "Assemblies/NetReload/v1.0/NetReload.dll"))
+	(if (= netReload nil)
+		(Trap1)
+	)
+	(command "_netload" netReload)
+
+	;; Load the command method template
 	(setq commandMethodTemplate (findfile "Assemblies/CommandMethodTemplate/v1.0/CommandMethodTemplate.dll"))
 	(if (= commandMethodTemplate nil)
 		(Trap1)
