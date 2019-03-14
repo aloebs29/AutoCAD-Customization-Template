@@ -1,0 +1,14 @@
+;;
+;;	CUI_Template
+;;	Author: Andrew Loebs
+;;	Desc: The commands within this file are run every time a new document is loaded
+;;
+;;
+
+
+;; Find load on startup file in our support file search paths
+(setq loadOnStartup (findfile "LoadOnStartup.lsp"))
+;; Load the LISP file
+(load loadOnStartup)
+;; Execute the routine defined within the LISP file
+(LoadOnStartup)
